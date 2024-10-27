@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import image from "../Images/pngwing 1.png"
 
 const Banner=()=>{
@@ -9,7 +10,11 @@ const Banner=()=>{
             <div className="pt-36">
                 <p className="text-6xl font-semibold text-black">Books to freshen up <br/></p>
                 <p className=" text-6xl font-semibold mt-6 text-black">your bookshelf</p> 
-                <button className="btn btn-success bg-[#23BE0A] text-white mt-12">View the list</button>
+
+                <Link to={"/Listed"}>
+                <button className="btn btn-success bg-[#23BE0A] text-xl text-white mt-12">View the list</button>
+                </Link>  
+                
             </div>
 
             <div className="mt-20">

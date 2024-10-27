@@ -1,4 +1,5 @@
 import { CiStar } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
 const Book=({book})=>{
 
@@ -6,8 +7,13 @@ const Book=({book})=>{
 
     return(
 
-        <div className="mt-12 ">
-            <div className="card bg-base-100 w-96 border-2 border-gray-300 shadow-xl">
+      
+
+        <div className="mb-12 ">
+          
+          <Link to={`/Book/${bookId}`}>
+
+           <div className="card bg-base-100 w-96 border-2 border-gray-300 shadow-xl">
   <figure className="px-6 pt-6">
     <img
       src={image}
@@ -15,11 +21,13 @@ const Book=({book})=>{
       className="rounded-xl h-[230px]" />
   </figure>
   <div className="flex gap-2 mx-6 mt-4">
+
   {tags.map((tag, index) => (
     <span key={index} className="badge text-[#23BE0A]">
       {tag}
     </span>
   ))}
+  
 </div>
   <div className="mx-6 mt-4">
     <h2 className="card-title text-2xl">{bookName}</h2>
@@ -34,6 +42,9 @@ const Book=({book})=>{
   </div>
 
 </div>
+
+          </Link>
+           
 
         </div>
     )
