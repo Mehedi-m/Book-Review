@@ -96,20 +96,20 @@ const BookDetails = () => {
                         {detail.rating}
                     </p>
 
-                    <div className="flex mt-8 gap-4">
-                        <button
-                            onClick={Readed}
-                            className="btn btn-outline text-black font-semibold w-full sm:w-auto"
-                        >
-                            Read
-                        </button>
-                        <button
-                            onClick={Added}
-                            className="btn hover:bg-blue-900 bg-[#50B1C9] text-white font-semibold w-full sm:w-auto"
-                        >
-                            Wishlist
-                        </button>
-                    </div>
+                    <div className="flex mt-8 gap-4 flex-col sm:flex-row">
+    <button
+        onClick={Readed}
+        className="btn btn-outline text-black font-semibold w-full sm:w-auto"
+    >
+        Read
+    </button>
+    <button
+        onClick={Added}
+        className="btn hover:bg-blue-900 bg-[#50B1C9] text-white font-semibold w-full sm:w-auto"
+    >
+        Wishlist
+    </button>
+</div>
                 </div>
             </div>
             <ToastContainer />
